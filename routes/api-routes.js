@@ -18,7 +18,11 @@ module.exports = function(app) {
             // complete: req.body.complete
         }).then(function(dbOrders) {
             res.json(dbOrders);
-        })
+        }).catch(function(err) {
+            // Whenever a validation or flag fails, an error is thrown
+            // We can "catch" the error to prevent it from being "thrown", which could crash our node app
+              res.json(err);
+            });
     })
 
 }
