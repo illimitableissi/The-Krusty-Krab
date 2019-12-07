@@ -15,13 +15,19 @@ $(".btn-success").on("click", function(event) {
     console.log(quantity);
     console.log(totalPrice);
 
-    $(".orderlist").append(`${itemName} = $${total} <br>`)
+    $(".orderlist").append(`${itemName} $${price} x ${quantity} = $${total} <br>`)
     $(".ordertotal").text(`Order Total = $${totalOrderPrice.toFixed(2)}`)
     $(".modal").toggle("modal");
-
         $(".close-icon").on("click", function(event) {
         event.preventDefault();
         $(".modal").hide("modal");
         });
+        $("#checkout").on("click", function(event)
+        {
+            $(".modal").hide("modal");
+            $(".orderlist").empty();
+            totalOrderPrice = 0;
+        });
+    
 
 });
