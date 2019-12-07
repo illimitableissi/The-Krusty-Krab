@@ -3,7 +3,7 @@ var newOrder = [];
 
 $(".btn-success").on("click", function(event) {
     event.preventDefault();
-
+    $("#receipt").hide();
     var userchoice = $(this).attr("data-topic");
     var itemName = $(this).attr("data-name");   
     var price = parseFloat($(`#${userchoice}`).attr("data-price"))
@@ -16,8 +16,8 @@ $(".btn-success").on("click", function(event) {
     console.log(quantity);
     console.log(totalPrice);
 
-    $(".orderlist").append(`${itemName} $${price} x ${quantity} = $${total} <br>`)
-    $(".ordertotal").text(`Order Total = $${totalOrderPrice.toFixed(2)}`)
+    $(".orderlist").append(`${itemName} $${price} x ${quantity} = $${total} <br>`);
+    $(".ordertotal").text(`Order Total = $${totalOrderPrice.toFixed(2)}`);
     $(".modal").toggle("modal");
         $(".close-icon").on("click", function(event) {
         event.preventDefault();
@@ -25,33 +25,35 @@ $(".btn-success").on("click", function(event) {
         });
         $("#checkout").on("click", function(event)
         {
+            event.preventDefault();
+            $("#receipt").show();
+            $("#checkout").hide();
+            $(".close-icon").hide();
+            $(".modal-body").html("<h1>" + "Enjoy your food!" + "</h1>");
 
-            var newOrder = [
-                {
-                item_name: itemName,
-                // Burger
-                price: price,
-                // 3.00
-                quantity: quantity,
-                // 3
-                order_total: total,
-                // $9
-            },
-            {
-                item_name: itemName,
-                // Burger
-                price: price,
-                // 3.00
-                quantity: quantity,
-                // 3
-                order_total: total,
-                // $9
-            }
-        ];
-        newOrder[0].order_total+
-
-            $(".modal").hide("modal");
-            $(".orderlist").empty();
+        //     var newOrder = [
+        //         {
+        //         item_name: itemName,
+        //         // Burger
+        //         price: price,
+        //         // 3.00
+        //         quantity: quantity,
+        //         // 3
+        //         order_total: total,
+        //         // $9
+        //     },
+        //     {
+        //         item_name: itemName,
+        //         // Burger
+        //         price: price,
+        //         // 3.00
+        //         quantity: quantity,
+        //         // 3
+        //         order_total: total,
+        //         // $9
+        //     }
+        // ];
+        // newOrder[0].order_total+
             totalOrderPrice = 0;
         });
     
