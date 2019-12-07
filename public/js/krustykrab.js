@@ -24,7 +24,9 @@ $(".btn-success").on("click", function(event) {
         });
         $("#checkout").on("click", function(event)
         {
-            event.preventDefault();
+            
+            $(".order-details").append(`${itemName} $${price} x ${quantity} = $${total} <br>`);
+            $(".order-details").append(`$${totalOrderPrice.toFixed(2)}`)
             $(".modal").hide("modal");
             $(".orderlist").empty();
             totalOrderPrice = 0;
