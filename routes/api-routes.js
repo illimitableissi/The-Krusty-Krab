@@ -14,8 +14,8 @@ module.exports = function(app) {
         db.Orders.create({
             // Once table is made put columns here
             // Format:
-            // text: req.body.text,
-            // complete: req.body.complete
+             text: req.body.text,
+             complete: req.body.complete
         }).then(function(dbOrders) {
             res.json(dbOrders);
         }).catch(function(err) {
