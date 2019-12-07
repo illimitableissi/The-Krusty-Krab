@@ -1,4 +1,5 @@
-var totalOrderPrice = 0
+var totalOrderPrice = 0;
+var newOrder = [];
 
 $(".btn-success").on("click", function(event) {
     event.preventDefault();
@@ -10,7 +11,7 @@ $(".btn-success").on("click", function(event) {
     var totalPrice = price * quantity;
     var total = parseFloat(totalPrice).toFixed(2)
     totalOrderPrice += totalPrice;
-
+    
     console.log(price);
     console.log(quantity);
     console.log(totalPrice);
@@ -24,13 +25,36 @@ $(".btn-success").on("click", function(event) {
         });
         $("#checkout").on("click", function(event)
         {
-            
-            $(".order-details").append(`${itemName} $${price} x ${quantity} = $${total} <br>`);
-            $(".order-details").append(`$${totalOrderPrice.toFixed(2)}`)
+
+            var newOrder = [
+                {
+                item_name: itemName,
+                // Burger
+                price: price,
+                // 3.00
+                quantity: quantity,
+                // 3
+                order_total: total,
+                // $9
+            },
+            {
+                item_name: itemName,
+                // Burger
+                price: price,
+                // 3.00
+                quantity: quantity,
+                // 3
+                order_total: total,
+                // $9
+            }
+        ];
+        newOrder[0].order_total+
+
             $(".modal").hide("modal");
             $(".orderlist").empty();
             totalOrderPrice = 0;
         });
     
-
 });
+
+module.exports(newOrder)
