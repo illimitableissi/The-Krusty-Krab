@@ -24,6 +24,7 @@ $(".btn-success").on("click", function(event) {
         });
         $("#checkout").on("click", function(event)
         {
+            event.preventDefault();
             $(".modal").hide("modal");
             $(".orderlist").empty();
             totalOrderPrice = 0;
