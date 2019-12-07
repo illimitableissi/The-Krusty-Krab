@@ -6,7 +6,7 @@ INSERT INTO Item_Type (item_type_name) VALUES ('Drink');
 
 INSERT INTO Item_Type (item_type_name) VALUES ('Dessert'); 
 
--- ----------------------------------------------------------
+-- ---------------------------------------------------------- MENU ITEMS --- MENU ITEMS --- MENU ITEMS --- MENU ITEMS --- 
 --                         Entrees
 INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('Krabby Patty', 'Entree', 1.25, 00); 
 
@@ -26,9 +26,26 @@ INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VA
 
 INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('Krusty Krab Pizza', 'Entree', 5.00, 850);
 
-INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('', 'Entree', 3.25, 850); 
+INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('Sailors Surprise', 'Entree', 3.00, 400);
+-- -----------------------------------------------------------
+--                              Sides
+INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('Coral Bits', 'Side', 1.50, 150); 
 
-INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('Krabby Patty', 'Entree', 3.25, 850); 
+INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('Kelp Fries', 'Side', 1.50, 200); 
+
+INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('Golden Loaf', 'Side', 2.00, 230); 
+
+-- -----------------------------------------------------
+--                          Drinks
+INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('Kelp Shake', 'Drink', 2.00, 375); 
+
+INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('Seafoam Soda', 'Drink', 2.00, 140);
+
+-- -----------------------------------------------------
+--                          Desserts
+INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('Pie Bomb', 'Side', 0.00, 800); 
+
+
 
 
 
