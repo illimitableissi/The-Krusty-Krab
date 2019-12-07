@@ -5,18 +5,17 @@ CREATE DATABASE krusty_krab;
 USE krusty_krab; 
 
 CREATE TABLE Item_Type(
-    item_type_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL, 
-    item_type VARCHAR(255) NOT NULL
+    item_type_name VARCHAR(255) PRIMARY KEY NOT NULL
 );
 
 CREATE TABLE Menu_Items(
     item_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL, 
     item_name VARCHAR(255) NOT NULL, 
-    item_type_id INT NOT NULL, 
+    item_type_name VARCHAR(255) NOT NULL, 
     item_price FLOAT NOT NULL, 
     item_calories INT NOT NULL, 
     UNIQUE (item_name),
-    FOREIGN KEY (item_type_id) REFERENCES Item_Type(item_type_id)
+    FOREIGN KEY (item_type_name) REFERENCES Item_Type(item_type_name)
 );
 
 CREATE TABLE Items_Ordered(
