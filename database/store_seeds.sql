@@ -43,7 +43,7 @@ INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VA
 
 -- -----------------------------------------------------
 --                          Desserts
-INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('Pie Bomb', 'Side', 0.00, 800); 
+INSERT INTO Menu_Items (item_name, item_type_name, item_price, item_calories) VALUES ('Pie Bomb', 'Dessert', 0.00, 800); 
 
 
 
