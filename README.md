@@ -1,17 +1,18 @@
 # Project-2
 
-* StoreFront (Fresh Prince of Bel-Air Theme) 
-* HTML and UX (Materialize)
+* StoreFront (Krusty Krab online website) 
+* HTML and UX (Bootstrap)
 * Node and Express Server (Set Up Connection)
-* MYSQL Server and Database (Merch from Actual Show)
+* MYSQL Server and Database (Krusty Krab menu items)
 * File for API Documentation
+
 ## Routing
 * Routes
     - GET 
         * Return DB on UI and console (SELECT * FROM ) 
         * Receive Reviews That Have Been Posted via POST route(s)
         * Add reviews to Database (Have Columns for user_email, rating, date_posted )
-        * Receive Certain Categories of Item/Specific Item ()
+        <!-- * Receive Certain Categories of Item/Specific Item () -->
         * Cart of items purchased
 
 
