@@ -18,6 +18,10 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.FLOAT,
         allowNull: false
       },
+      item_calories: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      }
     });
     return Menu_Item;
   };
