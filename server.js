@@ -11,6 +11,7 @@ var PORT = process.env.PORT || 8080;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
 
 // Syncing our sequelize models and then starting our express app
 // db.sequelize.sync({ force: true }).then(function() {

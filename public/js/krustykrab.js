@@ -31,32 +31,6 @@ $(".btn-success").on("click", function(event) {
             $(".close-icon").hide();
             $(".modal-body").html("<h1>" + "Enjoy your food!" + "</h1>");
 
-        //     var newOrder = [
-        //         {
-        //         item_name: itemName,
-        //         // Burger
-        //         price: price,
-        //         // 3.00
-        //         quantity: quantity,
-        //         // 3
-        //         order_total: total,
-        //         // $9
-        //     },
-        //     {
-        //         item_name: itemName,
-        //         // Burger
-        //         price: price,
-        //         // 3.00
-        //         quantity: quantity,
-        //         // 3
-        //         order_total: total,
-        //         // $9
-        //     }
-        // ];
-        // newOrder[0].order_total+
-            totalOrderPrice = 0;
         });
     
 });
-
-module.exports(newOrder)

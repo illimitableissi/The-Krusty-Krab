@@ -1,5 +1,6 @@
 var path = require("path");
 
+
 module.exports = function(app) {
 
     app.get("/", function(req, res) {
@@ -7,19 +8,19 @@ module.exports = function(app) {
     })
 
     app.get("/krustykrab", function(req, res) {
-        res.SendFile(path.join(__dirname, "../public/krustykrab.html"));
+        res.sendFile(path.join(__dirname, "../public/krustykrab.html"));
     })
 
     app.get("/receipt", function(req, res) {
-        res.SendFile(path.join(__dirname, "../public/receipt.html"));
+        res.sendFile(path.join(__dirname, "../public/receipt.html"));
     })
 
     app.get("/orders", function(req, res) {
-        res.SendFile(path.join(__dirname, "../public/orders.html"));
+        res.sendFile(path.join(__dirname, "../public/orders.html"));
     })
 
     app.get("*", function(req, res) {
-        res.SendFile(path.join(__dirname, "../public/index.html"));
+        res.sendFile(path.join(__dirname, "../public/index.html"));
     })
 
 }
