@@ -25,6 +25,8 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.FLOAT,
         allowNull: false
       }
-    });
+    },
+    {freezeTableName: true}
+    );
     return Items_Ordered;
   };
