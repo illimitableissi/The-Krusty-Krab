@@ -2,3 +2,9 @@ body {
     background-image: url(../images/background.jpg);
 }
 
+.card-img-top {
+    height: 200px;
+
+
+}
+
