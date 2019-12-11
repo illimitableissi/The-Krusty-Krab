@@ -40,9 +40,10 @@ $(".btn-success").on("click", function(event) {
             total: total
         };
 
-        newOrder.push(newItem);
-
-        console.log(newOrder);
+        $.post("/api/receipt", newItem, function(data) {
+            console.log("Data:");
+            console.log(data);
+        })
 
     });
     

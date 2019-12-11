@@ -1,4 +1,5 @@
 var db = require("../models")
+var receiptData = require("../data/receiptData.js");
 
 module.exports = function(app) {
 
@@ -7,6 +8,11 @@ module.exports = function(app) {
         db.Order.findAll({}).then(function(dbOrders) {
             res.json(dbOrders);
         })
+    })
+
+    // Receipt data testing
+    app.get("/api/receipt", function(req, res) {
+            res.json(receiptData);
     })
 
     // POST route for adding a new order
@@ -23,5 +29,17 @@ module.exports = function(app) {
               res.json(err);
             });
     })
+
+    // Receipt data testing
+    app.post("/api/receipt", function(req, res) {
+        receiptData.push(req.body);
+        res.json(req.body);
+    })
+
+    app.post("/api/clear", function(req, res) {
+        // Empty out the arrays of data
+        receiptData.length = 0;
+        res.json({ ok: true });
+      });
 
 }
