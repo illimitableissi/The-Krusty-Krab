@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/illimitableissi/Project-2/issues"
   },
-  "homepage": "https://github.com/illimitableissi/Project-2#readme"
+  "homepage": "https://github.com/illimitableissi/Project-2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
