@@ -6,3 +6,7 @@ background-image: url(/assets/images/krustykrab.png);
     font-size: 24px;
     font-weight: 500;
 }
+
+.jumbotron {
+    text-align: center;
+}
