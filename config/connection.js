@@ -11,9 +11,9 @@ connection.connect((err, res) => {
     console.log(`Connection Made. Connection ID: ${connection.threadId}`);
 });
 
-// connection.query('SELECT * FROM Menu_Items', (err, result) => {
-//     if (err) {
-//         throw err
-//     }; 
-//     console.log(result); 
-// }); 
+connection.query('SELECT * FROM Menu_Items', (err, result) => {
+    if (err) {
+        throw err
+    };
+    console.log(result);
+}); 
