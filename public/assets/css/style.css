@@ -3,5 +3,6 @@ background-image: url(/assets/images/krustykrab.png);
 }
 
 .order-details {
-    font-size: 24px
+    font-size: 24px;
+    font-weight: 500;
 }
