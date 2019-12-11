@@ -4,18 +4,17 @@ module.exports = function(app) {
 
     // Gets all orders and returns as json
     app.get("/api/orders", function(req, res) {
-        db.Orders.findAll({}).then(function(dbOrders) {
+        db.Order.findAll({}).then(function(dbOrders) {
             res.json(dbOrders);
         })
     })
 
     // POST route for adding a new order
     app.post("/api/orders", function(req, res) {
-        db.Orders.create({
+        db.Order.create({
             // Once table is made put columns here
             // Format:
-             text: req.body.text,
-             complete: req.body.complete
+             order_total: req.body.order_total
         }).then(function(dbOrders) {
             res.json(dbOrders);
         }).catch(function(err) {

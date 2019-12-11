@@ -3,7 +3,8 @@ module.exports = function(sequelize, DataTypes) {
       customer_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
       },
       order_total: {
         type: DataTypes.FLOAT,
