@@ -19,19 +19,31 @@ $(".btn-success").on("click", function(event) {
     $(".orderlist").append(`${itemName} $${price} x ${quantity} = $${total} <br>`);
     $(".ordertotal").text(`Order Total = $${totalOrderPrice.toFixed(2)}`);
     $(".modal").toggle("modal");
-        $(".close-icon").on("click", function(event) {
+
+    $(".close-icon").on("click", function(event) {
         event.preventDefault();
         $(".modal").hide("modal");
-        });
-        $("#checkout").on("click", function(event)
-        {
-            event.preventDefault();
-            $("#receipt").show();
-            $("#checkout").hide();
-            $(".close-icon").hide();
-            $(".modal-body").html("<h1>" + "Enjoy your food!" + "</h1>");
+    });
 
-        });
+    $("#checkout").on("click", function(event)
+    {
+        event.preventDefault();
+        $("#receipt").show();
+        $("#checkout").hide();
+        $(".close-icon").hide();
+        $(".modal-body").html("<h1>" + "Enjoy your food!" + "</h1>");
+
+        var newItem = {
+            item_name: itemName,
+            item_price: price,
+            item_quantity: quantity,
+            total: total
+        };
+
+        newOrder.push(newItem);
+
+        console.log(newOrder);
+
+    });
     
 });
-
