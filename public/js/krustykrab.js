@@ -11,25 +11,19 @@ $(".btn-success").on("click", function(event) {
     var totalPrice = price * quantity;
     var total = parseFloat(totalPrice).toFixed(2)
     totalOrderPrice += totalPrice;
-    
-    console.log(price);
-    console.log(quantity);
-    console.log(totalPrice);
+
+    $(`#${userchoice}`).val('');
 
     $(".orderlist").append(`${itemName} $${price} x ${quantity} = $${total} <br>`);
     $(".ordertotal").text(`Order Total = $${totalOrderPrice.toFixed(2)}`);
     $(".modal").toggle("modal");
 
-    $(".close-icon").on("click", function(event) {
-        event.preventDefault();
-        $(".modal").hide("modal");
-    });
-
-    $("#checkout").on("click", function(event)
+    $(".checkout").on("click", function(event)
     {
         event.preventDefault();
+        $(".modal").show("modal");
         $("#receipt").show();
-        $("#checkout").hide();
+        $(".checkout").hide();
         $(".close-icon").hide();
         $(".modal-body").html("<h1>" + "Enjoy your food!" + "</h1>");
 
@@ -47,4 +41,17 @@ $(".btn-success").on("click", function(event) {
 
     });
     
+});
+
+$("#view-order").click(function(event) {
+    event.preventDefault();
+    $(".modal").show("modal");
+    $("#receipt").hide();
+    $(".checkout").show();
+    $(".close-icon").show();
+})
+
+$(".close-icon").on("click", function(event) {
+    event.preventDefault();
+    $(".modal").hide("modal");
 });
