@@ -21,8 +21,8 @@ module.exports = function(app) {
             // Once table is made put columns here
             // Format:
              order_total: req.body.order_total
-        }).then(function(dbOrders) {
-            res.json(dbOrders);
+        }).then(function(dbOrder) {
+            res.json(dbOrder);
         }).catch(function(err) {
             // Whenever a validation or flag fails, an error is thrown
             // We can "catch" the error to prevent it from being "thrown", which could crash our node app
@@ -37,7 +37,7 @@ module.exports = function(app) {
     })
 
     app.post("/api/clear", function(req, res) {
-        // Empty out the arrays of data
+        // Empty out the array of data
         receiptData.length = 0;
         res.json({ ok: true });
       });

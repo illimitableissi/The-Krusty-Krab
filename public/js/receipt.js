@@ -5,15 +5,23 @@ function runReceiptQuery() {
         method: "GET"
     }).then(function(receiptData) {
 
+        console.log("receiptData:");
         console.log(receiptData);
+
+        console.log("receiptData[0]:");
+        console.log(receiptData[0]);
+
+        console.log("receiptData[0].orderList:");
+        console.log(receiptData[0].orderList);
+
         var orderTotal = 0;
         var pieCheck = false;
 
-        for (let i = 0; i < receiptData.length; i++) {
+        for (let i = 0; i < receiptData[0].orderList.length; i++) {
 
-            var itemString = `${receiptData[i].item_quantity}x ${receiptData[i].item_name} @ $${parseFloat(receiptData[i].item_price).toFixed(2)} = $${receiptData[i].total}<br>`;
+            var itemString = `${receiptData[0].orderList[i].item_quantity}x ${receiptData[0].orderList[i].item_name} @ $${parseFloat(receiptData[0].orderList[i].item_price).toFixed(2)} = $${receiptData[0].orderList[i].total}<br>`;
             $(".order-details").append(itemString);
-            orderTotal += parseFloat(receiptData[i].total);
+            orderTotal += parseFloat(receiptData[0].orderList[i].total);
             
             if (itemString.includes("Pie Bomb")) {
                 pieCheck = true;
