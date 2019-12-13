@@ -10,6 +10,15 @@ module.exports = function(app) {
         })
     })
 
+    app.get("/api/lastorder", function(req, res) {
+        db.Order.findAll({
+            limit: 1,
+            order: [ [ 'customer_id', 'ASC' ]]
+          }).then(function(entries){
+            res.json(entries)
+          }); 
+    })
+
     // Receipt data testing
     app.get("/api/receipt", function(req, res) {
             res.json(receiptData);

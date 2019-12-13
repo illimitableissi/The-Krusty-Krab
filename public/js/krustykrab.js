@@ -1,4 +1,5 @@
 var totalOrderPrice = 0;
+var orderNumber;
 
 var userchoice;
 var itemName;
@@ -83,3 +84,15 @@ $(".checkout").on("click", function(event)
         }
 
     });
+
+    function getOrderNumber() {
+
+        $.get(
+            "/api/lastorder",
+            function(data) {
+               console.log('Last Order data:');
+               console.log(data);
+            }
+        );
+
+    }
