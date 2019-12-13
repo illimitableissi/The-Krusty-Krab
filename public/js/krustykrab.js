@@ -75,9 +75,10 @@ $(".checkout").on("click", function(event)
 
         for (let i = 0; i < newOrder.orderList.length; i++) {
 
-            $.post("/api/items", newOrder.orderList[i], function(data) {
-            console.log("Items_Ordered data:");
-            console.log(data);
+            $.post("/api/orders", newOrder.orderList[i], function(data) {
+                console.log("Items_Ordered data:");
+                console.log(data);
+            })
             
         }
 
