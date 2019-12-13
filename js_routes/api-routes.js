@@ -30,6 +30,24 @@ module.exports = function(app) {
             });
     })
 
+    // POST route for adding a new order
+    app.post("/api/items", function(req, res) {
+        db.Items_Ordered.create({
+            // Once table is made put columns here
+            // Format:
+             item_name: req.body.item_name,
+             quantity: req.body.item_quantity,
+             item_price: req.body.item_price,
+             total_price_item: req.body.total
+        }).then(function(dbItem) {
+            res.json(dbItem);
+        }).catch(function(err) {
+            // Whenever a validation or flag fails, an error is thrown
+            // We can "catch" the error to prevent it from being "thrown", which could crash our node app
+              res.json(err);
+            });
+    })
+
     // Receipt data testing
     app.post("/api/receipt", function(req, res) {
         receiptData.push(req.body);
@@ -41,5 +59,7 @@ module.exports = function(app) {
         receiptData.length = 0;
         res.json({ ok: true });
       });
+
+    
 
 }
