@@ -10,6 +10,12 @@ module.exports = function(app) {
         })
     })
 
+    app.get("/api/items", function(req, res) {
+        db.Items_Ordered.findAll({}).then(function(dbItems) {
+            res.json(dbItems);
+        })
+    })
+
     app.get("/api/lastorder", function(req, res) {
         db.Order.findAll({
             limit: 1,

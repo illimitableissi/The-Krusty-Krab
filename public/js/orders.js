@@ -22,9 +22,9 @@ $.ajax({
             // var newCardText = $("<p>");
             // newCardText.addClass('card-text');
 
-            newCardBody.append(data[i].customer_id);
-            newCardBody.append(data[i].order_total);
-            newCardBody.append(data[i].createdAt);
+            newCardHeader.html(`Order #${data[i].customer_id}:`);
+            newCardBody.append(`Total: $${data[i].order_total.toFixed(2)}<br>`);
+            newCardBody.append(`Ordered at: ${moment(data[i].createdAt).format('M/D/YY h:mm A')}`);
 
             newCard.append(newCardHeader);            
             newCard.append(newCardBody);

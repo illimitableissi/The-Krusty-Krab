@@ -13,26 +13,28 @@ var newItem = {};
 
 $(".btn-success").on("click", function (event) {
 
-
     event.preventDefault();
     $("#receipt").hide();
     userchoice = $(this).attr("data-topic");
+    quantity = parseInt($(`#${userchoice}`).val());
     itemName = $(this).attr("data-name");
     price = parseFloat($(`#${userchoice}`).attr("data-price"))
-    quantity = parseInt($(`#${userchoice}`).val());
-    totalPrice = price * quantity;
-    total = parseFloat(totalPrice).toFixed(2)
-    totalOrderPrice += totalPrice;
 
-    $(`#${userchoice}`).val('');
     if (quantity) {
+
+        totalPrice = price * quantity;
+        total = parseFloat(totalPrice).toFixed(2)
+        totalOrderPrice += totalPrice;
+        console.log(totalOrderPrice);
+        $(`#${userchoice}`).val('');
+
         newItem = {
             item_name: itemName,
             item_price: price,
             item_quantity: quantity,
             total: total,
             order_id: orderNumber
-        };
+        }
 
         newOrder.orderList.push(newItem);
         console.log(newOrder);
@@ -40,6 +42,7 @@ $(".btn-success").on("click", function (event) {
         $(".orderlist").append(`${itemName} $${price} x ${quantity} = $${total} <br>`);
         $(".ordertotal").text(`Order Total = $${totalOrderPrice.toFixed(2)}`);
         $(".modal").toggle("modal");
+        
     } else {
         alert('You must enter a quantity greater than 0.');
     };
@@ -109,6 +112,6 @@ $(".checkout").on("click", function (event) {
 
         });
         
-        return orderNumber
+        return orderNumber;
 
     }
