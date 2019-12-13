@@ -4,7 +4,10 @@ body {
 
 .card-img-top {
     height: 200px;
+}
 
-
+#squidward{
+    height: 400px;
+    width: 500px
 }
 
