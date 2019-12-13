@@ -1,6 +1,6 @@
 var totalOrderPrice = 0;
-var orderNumber;
-
+var orderNumber = getOrderNumber();
+console.log(orderNumber);
 var userchoice;
 var itemName;
 var price;
@@ -30,7 +30,8 @@ $(".btn-success").on("click", function (event) {
             item_name: itemName,
             item_price: price,
             item_quantity: quantity,
-            total: total
+            total: total,
+            order_id: orderNumber
         };
 
         newOrder.orderList.push(newItem);
@@ -90,13 +91,24 @@ $(".checkout").on("click", function (event) {
     });
 
     function getOrderNumber() {
-
-        $.get(
-            "/api/lastorder",
-            function(data) {
+        var orderNumber;
+        $.ajax({
+            url:"/api/lastorder",
+            type: "get",
+            async: false,
+            success: function(data) {
                console.log('Last Order data:');
                console.log(data);
+               if (data.length == 0) {
+                    orderNumber = 1;
+               } else {
+                orderNumber = data[0].customer_id + 1;
+               }
+               
             }
-        );
+
+        });
+        
+        return orderNumber
 
     }

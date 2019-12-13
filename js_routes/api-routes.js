@@ -13,7 +13,7 @@ module.exports = function(app) {
     app.get("/api/lastorder", function(req, res) {
         db.Order.findAll({
             limit: 1,
-            order: [ [ 'customer_id', 'ASC' ]]
+            order: [ [ 'customer_id', 'DESC' ]]
           }).then(function(entries){
             res.json(entries)
           }); 
@@ -48,7 +48,7 @@ module.exports = function(app) {
              quantity: req.body.item_quantity,
              item_price: req.body.item_price,
              total_price_item: req.body.total,
-             order_id: null
+             order_id: req.body.order_id
         }).then(function(dbItem) {
             res.json(dbItem);
         }).catch(function(err) {
