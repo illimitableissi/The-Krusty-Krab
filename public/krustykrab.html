@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/restaurant.css">
+</head>
+<body>
+<div class="container">
+        <nav class="navbar fixed-top navbar-light bg-light">
+            <a class="navbar-brand" href="/index">Welcome to The Krusty Krab!</a>
+            <a class="nav-item nav-link" href="/api/items">Items Ordered API</a>
+            <a class="nav-item nav-link" href="/api/orders">Previous Orders API</a>
+            <a class="btn btn-outline-success" role="button" href="/orders">Previous Orders</a>
+              </nav>
+    <br>
+    <div class="text-center">
+<img src="./assets/images/squidward.png" class="img-fluid" alt="Responsive image">
+</div>
+<br>
+<div class="row row-cols-2 row-cols-md-4">
+        <div class="col mb-4">
+          <div class="card">
+            <img src="./assets/images/krabbypatty.jpg" class="card-img-top" alt="Responsive image">
+            <div class="card-body">
+              <h5 class="card-title">Krabby Patty - $1.25</h5>
+              <p class="card-text">
+                <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="krabbypatty" data-price="1.25" min="0" max="10">
+              </p>
+              <button type="button" class="btn btn-success" data-topic="krabbypatty" data-name="Krabby Patty">Add to Order</button>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="./assets/images/double.jpg" class="card-img-top" alt="Responsive image">
+            <div class="card-body">
+              <h5 class="card-title">Double Krabby Patty - $2.00</h5>
+              <p class="card-text">
+                <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="double-kp" data-price="2.00" min="0" max="10">
+              </p>
+              <button type="button" class="btn btn-success" data-topic="double-kp" data-name="Double Krabby Patty">Add to Order</button>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="./assets/images/triplemeal.jpg" class="card-img-top" alt="Responsive image">
+            <div class="card-body">
+              <h5 class="card-title">Triple Krabby Patty - $3.00</h5>
+              <p class="card-text">
+                <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="triple-kp" data-price="3.00" min="0" max="10">
+              </p>
+              <button type="button" class="btn btn-success" data-topic="triple-kp" data-name="Triple Krabby Patty">Add to Order</button>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="./assets/images/coral.png" class="card-img-top" alt="Responsive image">
+            <div class="card-body">
+              <h5 class="card-title">Coral Bits - $1.50</h5>
+              <p class="card-text">
+                <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="coral-bits" data-price="1.50" min="0" max="10">
+              </p>
+              <button type="button" class="btn btn-success" data-topic="coral-bits" data-name="Coral Bits">Add to Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-2 row-cols-md-4">
+            <div class="col mb-4">
+              <div class="card">
+                <img src="./assets/images/kelp_fries.jpg" class="card-img-top" alt="Responsive image">
+                <div class="card-body">
+                  <h5 class="card-title">Kelp Fries - $1.50</h5>
+                  <p class="card-text">
+                    <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="kelp-fries" data-price="1.50" min="0" max="10">
+                  </p>
+                  <button type="button" class="btn btn-success" data-topic="kelp-fries" data-name="Kelp Fries">Add to Order</button>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img src="./assets/images/kiddie_meal.png" class="card-img-top" alt="Responsive image">
+                <div class="card-body">
+                  <h5 class="card-title">Krabby Meal - $3.50</h5>
+                  <p class="card-text">
+                    <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="krabby-meal" data-price="3.50" min="0" max="10">
+                  </p>
+                  <button type="button" class="btn btn-success" data-topic="krabby-meal" data-name="Krabby Meal">Add to Order</button>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img src="./assets/images/doublekids.jpg" class="card-img-top" alt="Responsive image">
+                <div class="card-body">
+                  <h5 class="card-title">Double Krabby Meal - $3.75</h5>
+                  <p class="card-text">
+                    <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="double-km" data-price="3.75" min="0" max="10">
+                  </p>
+                  <button type="button" class="btn btn-success" data-topic="double-km" data-name="Double Krabby Meal">Add to Order</button>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card">
+                <img src="./assets/images/triple.jpg" class="card-img-top" alt="Responsive image">
+                <div class="card-body">
+                  <h5 class="card-title">Triple Krabby Meal - $4.00</h5>
+                  <p class="card-text">
+                    <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="triple-km" data-price="4.00" min="0" max="10">
+                  </p>
+                  <button type="button" class="btn btn-success" data-topic="triple-km" data-name="Triple Krabby Meal">Add to Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    <div class="row row-cols-2 row-cols-md-4">
+        <div class="col mb-4">
+            <div class="card">
+            <img src="./assets/images/salty.jpg" class="card-img-top" alt="Responsive image">
+            <div class="card-body">
+                <h5 class="card-title">Salty Sea Dog - $1.25</h5>
+                <p class="card-text">
+                    <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="salty-sea-dog" data-price="1.25" min="0" max="10">
+                </p>
+                <button type="button" class="btn btn-success" data-topic="salty-sea-dog" data-name="Salty Sea Dog">Add to Order</button>
+            </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+            <img src="./assets/images/hotdog.jpg" class="card-img-top" alt="Responsive image">
+            <div class="card-body">
+                <h5 class="card-title">Footlong - $2.00</h5>
+                <p class="card-text">
+                    <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="footlong" data-price="2.00" min="0" max="10">
+                </p>
+                <button type="button" class="btn btn-success" data-topic="footlong" data-name="Footlong">Add to Order</button>
+            </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+            <img src="./assets/images/sailor.jpg" class="card-img-top" alt="Responsive image">
+            <div class="card-body">
+                <h5 class="card-title">Sailors Surprise - $3.00</h5>
+                <p class="card-text">
+                    <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="sailors-surprise" data-price="3.00" min="0" max="10">
+                </p>
+                <button type="button" class="btn btn-success" data-topic="sailors-surprise" data-name="Sailors Surprise">Add to Order</button>
+            </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+            <img src="./assets/images/meatloaf.jpg" class="card-img-top" alt="Responsive image">
+            <div class="card-body">
+                <h5 class="card-title">Golden Loaf - $2.00</h5>
+                <p class="card-text">
+                    <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="golden-loaf" data-price="2.00" min="0" max="10">
+                </p>
+                <button type="button" class="btn btn-success" data-topic="golden-loaf" data-name="Golden-Loaf">Add to Order</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="row row-cols-2 row-cols-md-4">
+            <div class="col mb-4">
+                <div class="card">
+                <img src="./assets/images/kelpshake.png" class="card-img-top" alt="Responsive image">
+                <div class="card-body">
+                    <h5 class="card-title">Kelp Shake - $2.00</h5>
+                    <p class="card-text">
+                        <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="kelp-shake" data-price="2.00" min="0" max="10">
+                    </p>
+                    <button type="button" class="btn btn-success" data-topic="kelp-shake" data-name="Kelp Shake">Add to Order</button>
+                </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                <img src="./assets/images/soda.jpg" class="card-img-top" alt="Responsive image">
+                <div class="card-body">
+                    <h5 class="card-title">Seafoam Soda - $2.00</h5>
+                    <p class="card-text">
+                        <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="seafoam-soda" data-price="2.00" min="0" max="10">
+                    </p>
+                    <button type="button" class="btn btn-success" data-topic="seafoam-soda" data-name="Seafoam Soda">Add to Order</button>
+                </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+            <div class="card">
+            <img src="./assets/images/pizza.jpg" class="card-img-top" alt="Responsive image">
+            <div class="card-body">
+                <h5 class="card-title">Krusty Krab Pizza - $5.00</h5>
+                <p class="card-text">
+                    <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="krusty-krab-pizza" data-price="5.00" min="0" max="10">
+                </p>
+                <button type="button" class="btn btn-success" data-topic="krusty-krab-pizza" data-name="Krusty Krab Pizza">Add to Order</button>
+            </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+                <div class="card">
+                <img src="./assets/images/pie.jpg" class="card-img-top" alt="Responsive image">
+                <div class="card-body">
+                    <h5 class="card-title">Pie Bomb - Free</h5>
+                    <p class="card-text">
+                        <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="pie-bomb" data-price="0.00" min="0" max="10">
+                    </p>
+                    <button type="button" class="btn btn-success" data-topic="pie-bomb" data-name="Pie Bomb">Add to Order</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm mb-4 text-center">
+              <button type="button" class="btn btn-warning" id="view-order">View Order</button>
+              <button type="button" class="btn btn-danger checkout">Checkout</button>
+          </div>
+        </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Your Order</h5>
+                    <button type="button" class="close-icon" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+             </div>
+                <div class="modal-body">
+                    <h5 class="orderlist"></h2>
+                    <h5 class="ordertotal"></h5>
+                    </div>
+                <div class="modal-footer">
+                <a href="/receipt" class="btn btn-light" id="receipt" data-dismiss="modal">See your receipt</a>
+                <button type="button" class="btn btn-danger checkout" data-dismiss="modal">Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="./js/krustykrab.js"></script>
+</body>
+</html
