@@ -56,6 +56,7 @@ $("#view-order").click(function (event) {
 $(".close-icon").on("click", function (event) {
     event.preventDefault();
     $(".modal").hide("modal");
+    $(".orderimage").attr("src", "")
 });
 
 $(".checkout").on("click", function (event) {
