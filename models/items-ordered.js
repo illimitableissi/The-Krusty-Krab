@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       order_id: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true
       },
       quantity: {
         type: DataTypes.INTEGER,

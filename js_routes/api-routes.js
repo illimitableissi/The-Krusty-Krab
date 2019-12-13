@@ -38,7 +38,8 @@ module.exports = function(app) {
              item_name: req.body.item_name,
              quantity: req.body.item_quantity,
              item_price: req.body.item_price,
-             total_price_item: req.body.total
+             total_price_item: req.body.total,
+             order_id: null
         }).then(function(dbItem) {
             res.json(dbItem);
         }).catch(function(err) {
