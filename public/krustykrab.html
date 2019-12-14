@@ -18,7 +18,7 @@
               </nav>
     <br>
     <div class="text-center">
-<img src="./assets/images/squidward.png" class="img-fluid" alt="Responsive image">
+<img src="./assets/images/squidward.png" class="img-fluid" id="squidward" alt="Responsive image">
 </div>
 <br>
 <div class="row row-cols-2 row-cols-md-4">
@@ -198,25 +198,25 @@
             </div>
             <div class="col mb-4">
             <div class="card">
-            <img src="./assets/images/pizza.jpg" class="card-img-top" alt="Responsive image">
+            <img src="./assets/images/pizza.jpg" class="card-img-top" id="pizza" alt="Responsive image">
             <div class="card-body">
                 <h5 class="card-title">Krusty Krab Pizza - $5.00</h5>
                 <p class="card-text">
                     <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="krusty-krab-pizza" data-price="5.00" min="0" max="10">
                 </p>
-                <button type="button" class="btn btn-success" data-topic="krusty-krab-pizza" data-name="Krusty Krab Pizza">Add to Order</button>
+                <button type="button" class="btn btn-success pizza" data-topic="krusty-krab-pizza" data-name="Krusty Krab Pizza">Add to Order</button>
             </div>
             </div>
         </div>
         <div class="col mb-4">
                 <div class="card">
-                <img src="./assets/images/pie.jpg" class="card-img-top" alt="Responsive image">
+                <img src="./assets/images/pie.jpg" class="card-img-top" id="bomb" alt="Responsive image">
                 <div class="card-body">
                     <h5 class="card-title">Pie Bomb - Free</h5>
                     <p class="card-text">
                         <input class="form-control form-control-sm" type="number" placeholder="Quantity?" id="pie-bomb" data-price="0.00" min="0" max="10">
                     </p>
-                    <button type="button" class="btn btn-success" data-topic="pie-bomb" data-name="Pie Bomb">Add to Order</button>
+                    <button type="button" class="btn btn-success bomb" data-topic="pie-bomb" data-name="Pie Bomb">Add to Order</button>
                 </div>
                 </div>
             </div>
@@ -239,6 +239,7 @@
                         </button>
              </div>
                 <div class="modal-body">
+                    <img class="orderimage" class="img-fluid"></img>
                     <h5 class="orderlist"></h2>
                     <h5 class="ordertotal"></h5>
                     </div>
@@ -252,5 +253,17 @@
 
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="./js/krustykrab.js"></script>
+<script type="text/javascript">
+
+$(".pizza").on("click", function(event) {
+  $(".orderimage").attr("src", "https://media.giphy.com/media/iCAwhXue2SA7e/source.gif")
+
+})
+
+$(".bomb").on("click", function(event) {
+  $(".orderimage").attr("src", "https://media.giphy.com/media/RH5PC3s4JWh32/giphy.gif")
+
+})
+</script>
 </body>
 </html

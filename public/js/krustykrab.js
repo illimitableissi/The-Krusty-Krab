@@ -60,6 +60,8 @@ $("#view-order").click(function (event) {
 $(".close-icon").on("click", function (event) {
     event.preventDefault();
     $(".modal").hide("modal");
+    $(".orderimage").attr("src", "")
+    $("#squidward").attr("src", "https://media.giphy.com/media/6O7c9UFI6VsOs/giphy.gif")
 });
 
 $(".checkout").on("click", function (event) {
