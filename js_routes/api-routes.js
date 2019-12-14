@@ -5,7 +5,9 @@ module.exports = function(app) {
 
     // Gets all orders and returns as json
     app.get("/api/orders", function(req, res) {
-        db.Order.findAll({}).then(function(dbOrders) {
+        db.Order.findAll({
+            order: [ [ 'customer_id', 'DESC' ] ]
+        }).then(function(dbOrders) {
             res.json(dbOrders);
         })
     })
