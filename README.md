@@ -1,24 +1,19 @@
-# Project-2
+# The Krusty Krab
 
-* StoreFront (Fresh Prince of Bel-Air Theme) 
-* HTML and UX (Materialize)
+## Welcome all Spongebob Squarepants fans! Here at the Krusty Krab we have all of the fan favorites!!
+
+* StoreFront (Krusty Krab) 
+* HTML and UX (Materialize, Bootstrap)
 * Node and Express Server (Set Up Connection)
 * MYSQL Server and Database (Merch from Actual Show)
 * File for API Documentation
+
 ## Routing
 * Routes
     - GET 
         * Return DB on UI and console (SELECT * FROM ) 
-        * Receive Reviews That Have Been Posted via POST route(s)
-        * Add reviews to Database (Have Columns for user_email, rating, date_posted )
         * Receive Certain Categories of Item/Specific Item ()
         * Cart of items purchased
-
-
-    - POST
-        * Comments/Reviews after virtual purchase 
-        * Contact Info (Leave your contact info) 
-        
 
 * API 
     - /api route that displays documentation (in form of a file) on how to use API (For Developers); 
@@ -27,3 +22,27 @@
 * Who is the Client? 
     - User 
     - Developer (This is who the API is for)
+
+* config.json - configuration for sequelize and Heroku to connect to the database
+* models folder - has all of the schemas for our tables, although we ended up not using Item_Types or Menu_Items
+* api-routes - lays the groundwork for get & post requests made by the .js & .html files in the public folder:
+* /api/orders - get - findAll from Orders table (db)
+* /api/items - get - findAll from Items_Ordered table (db)
+* /api/lastorder - get - findOne from Orders table sorted by customer_id (descending) to find the most recent order number (to set the orderNumber variable in table
+* krustykrab.js). Had to make this call synchronous which is unfortunate since it detracts from the user experience (slightly slower load times)
+* /api/orders - post - Adds a new entry to Orders table (db) whenever someone clicks checkout (customer id, order total, and time of order)
+* /api/items - post - Adds a new entry to Items_Ordered for each item ordered after clicking checkout (item name, item price, item quantity, total item price)
+* html-routes - sets up all of the URL routes for the site:
+* / - homepage/welcome page
+* /krustykrab - Menu/Order page
+* /receipt - Receipt for whatever just got ordered after they checkout
+* /orders - Shows all previous orders using the get request from /api/orders
+* /* (anything not listed above) - 404 error page
+
+## Public Folder -
+* html files - front end webpages, using bootstrap, jquery, moment, google fonts, and our own css/js files. Home page and menu page use giphy api(?)
+* css files - styling
+* krustykrab.js - Makes an object for each item ordered, also makes an object with just the order # and order total for the Orders table
+* receipt.js - have to take another look at this, forget how it works lol
+* orders.js - makes a call to the Orders table and converts the returned array into html cards
+* server.js - sets up express, connects it to our routes, initializes the DB using sequelize (
