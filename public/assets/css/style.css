@@ -1,5 +1,6 @@
 body {
 background-image: url(/assets/images/krustykrab.png);
+font-family: 'Chelsea Market', cursive;
 }
 
 .order-details {
@@ -8,5 +9,25 @@ background-image: url(/assets/images/krustykrab.png);
 }
 
 .jumbotron {
+    
     text-align: center;
+}
+
+#welcome-title {
+    color: #8D323C;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+#welcome-message {
+    color: #8D323C;
+    font-size: 24px;
+}
+
+#welcome-card {
+    background-color: #DA9FC3;
+}
+
+#start-button {
+    margin-bottom: 10px;
 }

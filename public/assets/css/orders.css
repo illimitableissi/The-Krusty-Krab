@@ -1,3 +1,7 @@
+body {
+    font-family: 'Chelsea Market', cursive;
+}
+
 .card-body {
 
     font-size: 26px;
@@ -6,6 +10,11 @@
 
 .container {
 
-    opacity: .9;
+    opacity: .85;
 
+}
+
+#order-list, #order-display, .orders {
+    background-color: #DA9FC3;
+    color: rgb(119, 43, 52);
 }

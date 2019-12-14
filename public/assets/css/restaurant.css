@@ -1,5 +1,6 @@
 body {
     background-image: url(../images/background.jpg);
+    font-family: 'Chelsea Market', cursive;
 }
 
 .card-img-top {
@@ -11,3 +12,10 @@ body {
     width: 500px
 }
 
+.navbar {
+    background-color: #DA9FC3;
+}
+
+.navbar-brand, .nav-item {
+    color: #8D323C;
+}
