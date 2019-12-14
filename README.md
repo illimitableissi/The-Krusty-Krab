@@ -39,10 +39,22 @@
 * /orders - Shows all previous orders using the get request from /api/orders
 * /* (anything not listed above) - 404 error page
 
-## Public Folder -
+## Public Folder
 * html files - front end webpages, using bootstrap, jquery, moment, google fonts, and our own css/js files. Home page and menu page use giphy api(?)
 * css files - styling
 * krustykrab.js - Makes an object for each item ordered, also makes an object with just the order # and order total for the Orders table
 * receipt.js - have to take another look at this, forget how it works lol
 * orders.js - makes a call to the Orders table and converts the returned array into html cards
-* server.js - sets up express, connects it to our routes, initializes the DB using sequelize (
+* server.js - sets up express, connects it to our routes, initializes the DB using sequelize
+
+## Things to improve -
+* Make all calls asynchronously for fastest possible load times
+* Hide API key from public
+* Make it so orders on the previous orders page show items ordered, as well
+* Add "sales" to database, so that each time an item is bought it adds the item total (price * quantity) to a sales column and we can track total sales for each item on the menu. The Menu_Items table could become useful for this(?)
+
+## Contributors - 
+* Isimemen Inegbedion - Front-End Design, Javascript, jQuery
+* Colin Green - Sequelize, API/Routing creation, Javascript, jQuery
+* Andrew Fowose - MySQL database creation
+* Farangiz Asadulla - Routing creation
