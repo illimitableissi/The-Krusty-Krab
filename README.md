@@ -8,10 +8,13 @@
 * MYSQL Server and Database (Merch from Actual Show)
 * File for API Documentation
 
-![homepage](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/homepage.PNG)
-![menu](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/menu.PNG)
-![receipt](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/receipt.PNG)
-![previous](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/previous.PNG)
+![Image of homepage](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/homepage.PNG)
+
+![Image of menu](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/menu.PNG)
+
+![Image of receipt](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/receipt.PNG)
+
+![Image of previous](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/previous.PNG)
 
 ## Routing
 * Routes
