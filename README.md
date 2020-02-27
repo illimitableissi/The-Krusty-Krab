@@ -10,11 +10,11 @@
 
 ![Image of homepage](public/assets/images/homepage.PNG)
 
-![Image of menu](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/menu.PNG)
+![Image of menu](public/assets/images/menu.PNG)
 
-![Image of receipt](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/receipt.PNG)
+![Image of receipt](public/assets/images/receipt.PNG)
 
-![Image of previous](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/previous.PNG)
+![Image of previous](/public/assets/images/previous.PNG)
 
 ## Routing
 * Routes
