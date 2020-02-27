@@ -8,7 +8,7 @@
 * MYSQL Server and Database (Merch from Actual Show)
 * File for API Documentation
 
-![Image of homepage](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/homepage.PNG)
+![Image of homepage](public/assets/images/homepage.PNG)
 
 ![Image of menu](https://github.com/illimitableissi/The-Krusty-Krab/tree/master/public/assets/images/menu.PNG)
 
