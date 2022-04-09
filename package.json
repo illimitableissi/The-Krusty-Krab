@@ -20,7 +20,7 @@
   "homepage": "https://github.com/illimitableissi/Project-2#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mysql": "^2.17.1",
     "mysql2": "^2.0.2",
     "sequelize": "^5.21.2"
